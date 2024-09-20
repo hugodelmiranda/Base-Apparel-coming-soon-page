@@ -1,0 +1,194 @@
+@import url(reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  width: 100vw;
+  height: 100%;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  height: 50px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+section {
+  position: relative;
+}
+section img {
+  width: 100%;
+}
+
+article {
+  position: relative;
+  text-align: center;
+  margin-top: 30px;
+  padding: 1rem;
+}
+article h1 {
+  text-transform: uppercase;
+  font-size: 54px;
+  font-weight: 300;
+  color: hsl(0, 36%, 70%);
+}
+article h1 span {
+  font-weight: 500;
+  color: hsl(0, 6%, 24%);
+}
+article p {
+  margin-top: 20px;
+  line-height: 30px;
+  color: hsl(0, 36%, 70%);
+}
+article form {
+  margin: 20px 0 0 0;
+  position: relative;
+  display: flex;
+}
+article form .input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  background: transparent;
+  border: 0;
+}
+article form #emailInput {
+  width: 100%;
+  height: 40px;
+  border-radius: 25px;
+  border: 1px solid hsl(0, 36%, 70%);
+  padding-left: 30px;
+}
+article form #emailInput:focus, article form #emailInput:focus-visible {
+  border: 2px solid hsl(0, 93%, 68%) !important;
+}
+article form #emailInput::-moz-placeholder {
+  color: hsl(0, 36%, 70%);
+}
+article form #emailInput::placeholder {
+  color: hsl(0, 36%, 70%);
+}
+article form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.8rem 1.8rem;
+  height: 45px;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+}
+article form button:hover, article form button:focus, article form button:active {
+  background: linear-gradient(135deg, hsla(0, 80%, 86%, 0.5), hsla(0, 74%, 74%, 0.5));
+}
+article form .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+article #emailError {
+  margin-top: 0;
+  margin-left: 30px;
+  text-align: left;
+  color: hsl(0, 93%, 68%);
+  font-size: 12px;
+  display: none;
+}
+article .errorIcon {
+  position: absolute;
+  right: 80px;
+  top: 10px;
+  display: none;
+}
+
+.show {
+  display: block !important;
+}
+
+@media only screen and (min-width: 750px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+  main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    grid-template-rows: min-content 1fr;
+    grid-template-areas: "logo hero" "intro hero";
+  }
+  section {
+    grid-area: hero;
+  }
+  section figure {
+    height: 100%;
+  }
+  section img {
+    content: url(../images/hero-desktop.jpg);
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  header {
+    grid-area: logo;
+    margin-left: 5rem;
+  }
+  article {
+    grid-area: intro;
+    margin-left: 5rem;
+    margin-top: 10rem;
+    margin-right: 5rem;
+    text-align: left;
+  }
+  footer {
+    grid-area: intro;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  header {
+    grid-area: logo;
+    margin-left: 10rem;
+    margin-right: 5rem;
+  }
+  article {
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-top: 10rem;
+  }
+}/*# sourceMappingURL=style.css.map */
